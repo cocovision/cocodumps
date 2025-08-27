@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { client } from '@/lib/sanity'
+import { client, urlFor } from '@/lib/sanity'
 import Image from 'next/image'
 
 interface Project {
@@ -12,11 +12,11 @@ interface Project {
   category: string
   projectDate: string
   beforeImages?: Array<{
-    asset: { url: string }
+    asset: { _ref: string; _type: string }
     alt?: string
   }>
   afterImages?: Array<{
-    asset: { url: string }
+    asset: { _ref: string; _type: string }
     alt?: string
   }>
 }
@@ -76,12 +76,12 @@ export default function Projects() {
             description,
             category,
             projectDate,
-            "beforeImages": beforeImages[]{
-              "asset": asset->{url},
+            beforeImages[]{
+              asset,
               alt
             },
-            "afterImages": afterImages[]{
-              "asset": asset->{url},
+            afterImages[]{
+              asset,
               alt
             }
           }
@@ -128,7 +128,7 @@ export default function Projects() {
             <>
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 <Image
-                  src={images[currentImageIndex]?.asset?.url}
+                  src={urlFor(images[currentImageIndex]?.asset).width(800).height(450).url()}
                   alt={images[currentImageIndex]?.alt || project.title}
                   className="w-full h-full object-cover"
                   fill

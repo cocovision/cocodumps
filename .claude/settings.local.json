@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git config:*)",
+      "Bash(npx sanity:*)",
+      "Bash(npm run sanity schema:*)",
+      "Bash(npm run:*)",
+      "Bash(./node_modules/.bin/sanity schema:*)",
+      "Bash(npm install)",
+      "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
+      "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
+      "Read(/C:\\Users\\jesse.garcia\\Downloads/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
