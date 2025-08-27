@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,7 +12,16 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-green-600">Cocodumps</h1>
+            <a href="#home" className="flex items-center">
+              <Image
+                src="/mainlogo.jpg"
+                alt="Cocodumps Junk Removal"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain"
+                priority
+              />
+            </a>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
