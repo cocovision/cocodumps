@@ -16,9 +16,9 @@ export default function Header() {
               <Image
                 src="/mainlogo.jpg"
                 alt="Cocodumps Junk Removal"
-                width={180}
-                height={60}
-                className="h-12 w-auto object-contain"
+                width={240}
+                height={80}
+                className="h-16 w-auto object-contain"
                 priority
               />
             </a>
