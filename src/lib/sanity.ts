@@ -15,5 +15,5 @@ export const client = createClient({
 const builder = imageUrlBuilder(client)
 
 export function urlFor(source: { asset: { _ref: string; _type: string } } | { _ref: string; _type: string }) {
-  return builder.image(source)
+  return builder.image(source.asset || source)
 }

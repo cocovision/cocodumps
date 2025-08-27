@@ -13,11 +13,11 @@ interface Project {
   projectDate: string
   beforeImages?: Array<{
     asset: { _ref: string; _type: string }
-    alt?: string
+    alt?: string | null
   }>
   afterImages?: Array<{
     asset: { _ref: string; _type: string }
-    alt?: string
+    alt?: string | null
   }>
 }
 
@@ -130,7 +130,7 @@ export default function Projects() {
             <>
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 <Image
-                  src={images[currentImageIndex]?.asset ? urlFor(images[currentImageIndex].asset).url() : '/placeholder-image.jpg'}
+                  src={images[currentImageIndex]?.asset ? urlFor(images[currentImageIndex]).url() : '/placeholder-image.jpg'}
                   alt={images[currentImageIndex]?.alt || project.title}
                   className="w-full h-full object-cover"
                   fill
