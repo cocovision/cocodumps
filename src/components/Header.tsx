@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           <div className="flex items-center space-x-4">
             <a href="#home" className="flex items-center">
               <Image
@@ -18,7 +18,7 @@ export default function Header() {
                 alt="Cocodumps Junk Removal"
                 width={300}
                 height={80}
-                className="h-12 md:h-16 lg:h-20 w-auto object-contain"
+                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
                 priority
               />
             </a>
