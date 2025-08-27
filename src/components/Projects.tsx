@@ -135,7 +135,7 @@ export default function Projects() {
                   className="w-full h-full object-cover"
                   fill
                   style={{ objectFit: 'cover' }}
-                  onError={(e) => {
+                  onError={() => {
                     console.log('Image load error for project:', project.title)
                     console.log('Image data:', images[currentImageIndex])
                   }}
