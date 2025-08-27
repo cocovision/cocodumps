@@ -6,9 +6,9 @@ import { schemaTypes } from './sanity/schemas'
 export default defineConfig({
   name: 'default',
   title: 'Cocodumps CMS',
-
-  projectId: 'usowailm',
-  dataset: 'production',
+  
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'usowailm',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
 
   plugins: [structureTool(), visionTool()],
 
