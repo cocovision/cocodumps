@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'Cocodumps CMS',
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId: 'usowailm',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 
