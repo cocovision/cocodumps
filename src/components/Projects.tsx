@@ -130,7 +130,7 @@ export default function Projects() {
             <>
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 <Image
-                  src={images[currentImageIndex]?.asset ? urlFor(images[currentImageIndex].asset).width(800).height(450).url() : '/placeholder-image.jpg'}
+                  src={images[currentImageIndex]?.asset ? urlFor(images[currentImageIndex].asset).url() : '/placeholder-image.jpg'}
                   alt={images[currentImageIndex]?.alt || project.title}
                   className="w-full h-full object-cover"
                   fill
