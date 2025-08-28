@@ -10,7 +10,7 @@ export default function Hero() {
               Professional Junk Removal in 
               <span className="text-green-600"> Southern California</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Fast, reliable, and eco-friendly junk removal services. We handle everything from household cleanouts to commercial waste removal.
             </p>
             
@@ -34,25 +34,25 @@ export default function Hero() {
                 <div className="bg-white rounded-lg p-4 shadow-md mb-2">
                   <Truck className="w-8 h-8 text-green-600 mx-auto" />
                 </div>
-                <p className="text-sm font-medium">Same-Day Service</p>
+                <p className="text-sm font-medium text-gray-800">Same-Day Service</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-4 shadow-md mb-2">
                   <Clock className="w-8 h-8 text-green-600 mx-auto" />
                 </div>
-                <p className="text-sm font-medium">Fast & Efficient</p>
+                <p className="text-sm font-medium text-gray-800">Fast & Efficient</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-4 shadow-md mb-2">
                   <Shield className="w-8 h-8 text-green-600 mx-auto" />
                 </div>
-                <p className="text-sm font-medium">Fully Insured</p>
+                <p className="text-sm font-medium text-gray-800">Fully Insured</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-4 shadow-md mb-2">
                   <Star className="w-8 h-8 text-green-600 mx-auto" />
                 </div>
-                <p className="text-sm font-medium">5-Star Rated</p>
+                <p className="text-sm font-medium text-gray-800">5-Star Rated</p>
               </div>
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function Hero() {
               <div className="aspect-video bg-gradient-to-r from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <Truck className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                  <p className="text-gray-600">Professional Junk Removal Team</p>
-                  <p className="text-sm text-gray-500 mt-2">Serving Southern California</p>
+                  <p className="text-gray-800">Professional Junk Removal Team</p>
+                  <p className="text-sm text-gray-700 mt-2">Serving Southern California</p>
                 </div>
               </div>
             </div>

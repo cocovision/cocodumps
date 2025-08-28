@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { contactService } from '@/lib/contact-service'
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -17,35 +18,28 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const data = contactSchema.parse(body)
 
-    // In a real application, you would:
-    // 1. Send an email notification
-    // 2. Save to database
-    // 3. Integrate with scheduling system
-    // 4. Send SMS notifications
-    
+    // Log submission for monitoring
     console.log('New contact form submission:', {
-      ...data,
+      name: data.name,
+      email: data.email,
+      serviceType: data.serviceType,
       timestamp: new Date().toISOString(),
     })
 
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    // Process the contact form submission
+    const result = await contactService.submitContactForm(data)
 
-    return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Thank you! We\'ll contact you within 24 hours to schedule your free quote.' 
-      },
-      { status: 200 }
-    )
+    return NextResponse.json(result, {
+      status: result.success ? 200 : 500
+    })
   } catch (error) {
-    console.error('Contact form error:', error)
+    console.error('Contact form validation error:', error)
     return NextResponse.json(
       { 
         success: false, 
-        message: 'There was an error sending your message. Please try calling us directly.' 
+        message: 'There was an error processing your message. Please try calling us directly.' 
       },
-      { status: 500 }
+      { status: 400 }
     )
   }
 }

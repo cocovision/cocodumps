@@ -199,7 +199,7 @@ export default function Contact() {
                   </label>
                   <input
                     {...register('name')}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder:text-gray-500"
                     placeholder="Your full name"
                   />
                   {errors.name && (
@@ -214,7 +214,7 @@ export default function Contact() {
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder:text-gray-500"
                     placeholder="your@email.com"
                   />
                   {errors.email && (
@@ -231,7 +231,7 @@ export default function Contact() {
                   <input
                     {...register('phone')}
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder:text-gray-500"
                     placeholder="(555) 123-4567"
                   />
                   {errors.phone && (
@@ -245,7 +245,7 @@ export default function Contact() {
                   </label>
                   <select
                     {...register('serviceType')}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                   >
                     <option value="">Select service type</option>
                     {serviceTypes.map((service) => (
@@ -266,7 +266,7 @@ export default function Contact() {
                 </label>
                 <input
                   {...register('address')}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder:text-gray-500"
                   placeholder="123 Main St, City, CA 12345"
                 />
                 {errors.address && (
@@ -284,7 +284,7 @@ export default function Contact() {
                     {...register('preferredDate')}
                     type="date"
                     min={minDateString}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                   />
                 </div>
                 
@@ -295,7 +295,7 @@ export default function Contact() {
                   </label>
                   <select
                     {...register('preferredTime')}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                   >
                     <option value="">Select time slot</option>
                     {timeSlots.map((slot) => (
@@ -314,7 +314,7 @@ export default function Contact() {
                 <textarea
                   {...register('message')}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 placeholder:text-gray-500"
                   placeholder="Please describe what items you need removed, approximate quantity, and any special requirements..."
                 />
                 {errors.message && (

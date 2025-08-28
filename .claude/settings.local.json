@@ -15,7 +15,10 @@
       "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
       "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
       "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
-      "Read(/C:\\Users\\jesse.garcia\\Downloads/**)"
+      "Read(/C:\\Users\\jesse.garcia\\Downloads/**)",
+      "Bash(taskkill:*)",
+      "Bash(cmd //c:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
